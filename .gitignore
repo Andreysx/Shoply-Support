@@ -2,3 +2,9 @@
 .venv
 __pycache__/
 logs/
+index/
+.pdf
+.docx
+.xlsx
+.csv
+.doc
