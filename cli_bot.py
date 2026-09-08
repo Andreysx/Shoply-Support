@@ -7,7 +7,6 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_openai import ChatOpenAI
-
 # Создаём класс для CLI-бота
 class cli_bot():
     def __init__(self, model_name, system_prompt="Ты полезный ассистент."):
@@ -62,7 +61,7 @@ class cli_bot():
             except (KeyboardInterrupt, EOFError):
                 print("\nБот: Завершение работы.")
                 break
-            if not user_text:
+            if not user_text: #Пустой ввод от пользователя
                 continue
 
             logging.info(f"User: {user_text}")
